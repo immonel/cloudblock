@@ -10,7 +10,7 @@
         pkg:
           - docker.io
           - libcap2-bin
-          - python-pip
+          - python3-pip
           - ssl-cert
         state: latest
         update_cache: yes
@@ -202,7 +202,6 @@
         purge_networks: yes
         restart_policy: "always"
       when: dns_novpn == "1"
-      no_log: True
 
     - name: wireguard container
       docker_container:
